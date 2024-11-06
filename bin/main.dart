@@ -3,7 +3,7 @@ import 'hellpers.dart';
 
 // for start: dart run main.dart
 void main(List<String> arguments) {
-  List<String> carsList = [];
+  Set<String> carsList = {};
 
   bool state = true;
   String? answerOptional;
@@ -28,16 +28,8 @@ void main(List<String> arguments) {
   }
 }
 
-void addCar(List<String> carList, String carNumber) {
-  print("Enter index of place");
-  String? answerOptional;
-  answerOptional = stdin.readLineSync(); // Користувач вводить відповідь.
-  int answerInt = fromNullableToInt(answerOptional);
-  if (answerInt < carList.length) {
-    carList.insert(answerInt, carNumber);
-  } else {
-    carList.add(carNumber);
-  }
+void addCar(Set<String> carList, String carNumber) {
+  carList.add(carNumber);
 }
 
 bool stopApp(bool state) {

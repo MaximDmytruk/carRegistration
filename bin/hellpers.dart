@@ -13,8 +13,9 @@ int fromNullableToInt(String? string) {
     if (a != null) {
       int number = a;
       return number;
-    } else
+    } else {
       return -1;
+    }
   } else {
     return -1;
   }
